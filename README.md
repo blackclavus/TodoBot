@@ -20,6 +20,14 @@ A Discord bot for managing todo and grocery lists using slash commands. Each use
 | `/list` | Show all your lists in this server |
 | `/complete <name>` | Mark a list as complete and delete it |
 
+### Admin (Owner Only)
+
+| Command | Description |
+|---------|-------------|
+| `/sync [guild_only]` | Sync slash commands globally or to test guild |
+| `/status` | Show bot latency, uptime, guild count, and versions |
+| `/reload <cog>` | Hot-reload a cog by name |
+
 ## Setup
 
 1. **Clone the repository**
