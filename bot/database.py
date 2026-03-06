@@ -26,4 +26,16 @@ async def init_db():
                 FOREIGN KEY (list_id) REFERENCES todo_lists (id)
             )
         """)
+        await db.execute("""
+            CREATE TABLE IF NOT EXISTS reminders (
+                id          INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id     INTEGER NOT NULL,
+                guild_id    INTEGER NOT NULL,
+                channel_id  INTEGER NOT NULL,
+                text        TEXT    NOT NULL,
+                remind_at   TEXT    NOT NULL,
+                repeat      TEXT    DEFAULT NULL,
+                created_at  TEXT    NOT NULL
+            )
+        """)
         await db.commit()
